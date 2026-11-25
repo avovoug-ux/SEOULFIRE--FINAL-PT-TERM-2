@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SEOUL FIRE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top">
+        <span>Korean Flavors, Made for You!</span>
+    </div>
+
+
+    <div class="side">
+
+        <div class="logo">
+            <h2>SEOUL FIRE</h2>
+            <p>KOREAN SPICY FOODS</p>
+        </div>
+
+        <button class="nav-btn active" id="home" onclick="showMenu('all')">🏠 HOME</button>
+        <button class="nav-btn" id="food" onclick="showMenu('food')">🍜 FOOD</button>
+        <button class="nav-btn" id="drinks" onclick="showMenu('drinks')">🥤 DRINKS</button>
+        <button class="nav-btn" id="orders" onclick="showOrders()">📋 ORDERS</button>
+        <button class="nav-btn" id="report" onclick="showReport()">📊 SALES REPORT</button>
+        <button class="nav-btn" id="settings" onclick="showSettings()">⚙️ SETTINGS</button>
+
+    </div>
+
+    <div class="menu">
+
+        <h2>MENU</h2>
+
+        <div class="search-area">
+            <input type="text" id="search" placeholder="🔍 Search food..." oninput="searchFood()">
+            <button onclick="searchFood()" id="search-btn">SEARCH</button>
+        </div>
+
+        <br>
+
+        <button class="category" onclick="showMenu('all')">All Categories</button>
+
+        <div id="foodlist">
+
+            <div class="food-card food" id="tteok">
+                <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA3L3Jhd3BpeGVsX29mZmljZV8zMl8zZF9yZWFsaXN0aWNfb2ZfYV90dGVva2Jva2tpX2ZsYXRfbGF5X3ZpZXdfb180ZjdiOGI5Ni01Yjc1LTQ5ZjctODVlNi1mNThhMzg1YjQyYTNfMS5qcGc.jpg" alt="Tteokbokki">
+
+                <h3>Tteokbokki</h3>
+                <p>₱70.00</p>
+                <button class="add" onclick="addTteokbokki()">+</button>
+            </div>
+
+            <div class="food-card food" id="buldak">
+                <img src="https://i.pinimg.com/736x/ec/98/6d/ec986d7b88047860a5e536a0113ce317.jpg" alt="Buldak">
+
+                <h3>Buldak</h3>
+                <p>₱60.00</p>
+                <button class="add" onclick="addBuldak()">+</button>
+            </div>
+
+            <div class="food-card food" id="kimchi">
+                <img src="https://i.pinimg.com/1200x/17/d8/24/17d824257210369320af1f4a5a2b6631.jpg" alt="Kimchi Jjigae">
+
+                <h3>Kimchi Jjigae</h3>
+                <p>₱75.00</p>
+                <button class="add" onclick="addKimchi()">+</button>
+            </div>
+
+            <div class="food-card drinks" id="milkis">
+                <img src="https://i.pinimg.com/1200x/37/e4/d1/37e4d1e565c8d1adc03dbdf34843fc15.jpg" alt="Milkis">
+
+                <h3>Milkis</h3>
+                <p>₱29.00</p>
+                <button class="add" onclick="addMilkis()">+</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="order">
+
+        <h2>🛒 YOUR ORDER</h2>
+
+        <div id="orderList">
+            <p>Your order is empty.</p>
+        </div>
+
+        <div class="thanks">
+            <h2>감사합니다!</h2>
+            <p>Your order is on its way!</p>
+        </div>
+
+        <div class="total">
+
+            <p>SUBTOTAL <span id="subtotal">₱0.00</span></p>
+            <p>DISCOUNT <span>₱0.00</span></p>
+            <h3>TOTAL <span id="total">₱0.00</span></h3>
+
+        </div>
+
+        <button class="clear" onclick="clearOrder()">CLEAR ORDER</button>
+        <button class="checkout" onclick="checkout()">CHECK OUT</button>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
